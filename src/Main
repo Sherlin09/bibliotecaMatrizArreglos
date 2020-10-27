@@ -1,0 +1,129 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author sherl
+ */
+
+
+import java.io.IOException;
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+
+
+
+public class Main {
+    public static void main (String [] args ) throws IOException 
+    {
+        //ventana de bienvenida
+        JOptionPane.showMessageDialog(null, "Bienvenido a mi \n Menu Matrices ");
+        
+        Scanner lectura = new Scanner (System.in);
+        // declarscion de variable
+        int  menuO;
+    
+        
+        String menu = " 1: Suma de Matrices\n" 
+                +"2: Resta de Matrices\n"+
+                "3: Multiplicacion de Matrices\n" 
+                +"4:Matriz ordenada por Insercion \n"
+                +"5: Matriz en forma de espiral\n" 
+                +" 6: Matriz Adjunta\n" 
+                +"7: Matriz Inversa\n" 
+                + " 8: un vector A la suma de sus columnas y en un vector B la suma de filas\n" 
+                + " 9: Dada una matriz intercambiar \n" 
+                + " 10: Calcular moda\n" 
+                +"11: Shell sort\n" 
+                + "12: Bubble Sort";
+        
+        menuO =  Integer.parseInt(JOptionPane.showInputDialog(menu));
+        
+        switch(menuO){
+            //Opcion 1: Suma de Matrices
+            case 1:
+                proceso Matrisuma = new proceso();
+                Matrisuma.llenarMatrices(menuO);
+                break; 
+                
+                //Opcion 2: Resta de Matrices
+            case 2:
+                proceso Matriresta = new proceso();
+                Matriresta.llenarMatrices(menuO);
+                break;
+                
+                //Opcion 3: Multiplicacion de Matrices
+            case 3:
+                 proceso Matrimulti = new  proceso();
+                Matrimulti.llenarMatrices(menuO);
+                break;
+                //Opcion 4:Matriz ordenada por Insercion
+            case 4:
+                 proceso id = new  proceso();
+                id.datos6(menuO);
+                
+                break;
+                //Opcion 5: Matriz en forma de espiral
+             case 5:
+                 proceso espiral = new  proceso();
+                espiral.main(args);
+                
+                break;
+                //Opcion 6: Matriz Adjunta
+             case 6:
+                 proceso Madjunta = new  proceso();
+                Madjunta.datos(menuO);
+                
+                break;
+                //Opcion 7: Matriz Inversa
+             case 7:
+                proceso Minversa = new  proceso();
+                Minversa.datos1(menuO);
+                
+                break;
+                //Opcion 8: un vector A la suma de sus columnas y en un vector B la suma de filas
+             case 8:
+                 proceso Vectorab = new  proceso();
+                Vectorab.datos2(menuO);
+               
+                break;
+                //Opcion 9: Dada una matriz intercambiar
+             case 9:
+                 proceso Matrizintercambiar = new  proceso();
+                Matrizintercambiar.datos3(menuO);
+                
+                break;
+                //Opcion 10: Calcular moda
+             case 10:
+                 proceso sim = new  proceso();
+                sim.datos4(menuO);
+                
+                break;
+                //Opcion 11: Shell sort
+              case 11:
+                 proceso mag = new  proceso();
+                mag.datos7(menuO);
+                
+                break;
+                
+                case 12:
+                    //Opcion 12: Bubble Sort
+                 proceso bu = new  proceso();
+                bu.datos5(menuO);
+                
+                break;
+                
+               case 13:
+               JOptionPane.showMessageDialog(null, "Cerrando Programa");
+                break;
+                default:
+                    JOptionPane.showMessageDialog(null, "Opcion incorrecta");
+                    break;
+        }
+        
+    }
+}
